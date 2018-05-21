@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <style>
+            body 
+            {    
+                background-color: blue;
+                width: 100%;
+                height: 100%;
+            }
+            #img_Container
+            {
+                width: 35%;
+                height: 100%;
+            }
+            #img_Container img
+            {
+                width: 100%;
+                margin-top: 15px;
+                float: left;
+                height: 25%;
+            }
+            #img_Container a
+            {
+                float: left;
+            }
+        </style>
+        <script>
+            alert("Welcome!!!!")
+            function setRed() {
+                console.log("RED!!!");
+                document.body.style.backgroundColor = "red";
+            }
+            function setBlue() {
+                console.log("Blue!!!");
+                document.body.style.backgroundColor = "blue";
+            }
+            
+            function pubg() {
+                console.log("PUBG!!!");
+                alert("PUBG")
+            }
+            
+             function rs6() {
+                console.log("Rainbow six siege!!!");
+                alert("RS6")
+            }
+            
+            function pubgInfo() {
+                console.log("PUBG!!!");
+                document.getElementById("info").innerHTML = "PlayerUnknown's Battlegrounds (PUBG) is a multiplayer online battle royale game developed and published by PUBG Corporation, a subsidiary of Korean publisher Bluehole. The game is based on previous mods that were developed by Brendan PlayerUnknown Greene for other games using the 2000 film Battle Royale";
+            }
+            
+             function rs6Info() {
+                console.log("Rainbow six siege!!!");
+                document.getElementById("info").innerHTML = "Tom Clancy's Rainbow Six Siege is a tactical shooter video game developed by Ubisoft Montreal and published by Ubisoft. It was released worldwide on December 1, 2015, for Microsoft Windows, PlayStation 4 and Xbox One. The game puts heavy emphasis on environmental destruction and cooperation between players.";
+            }
+            
+        </script>
+    </head>
+    <body>
+        <button id="red" onclick="setRed()">
+            Red Background
+        </button>
+           
+        <button id="blue" onclick="setBlue()">
+            Blue Background
+        </button>
+        <div id="img_Container">
+            <img src="https://cdn.images.express.co.uk/img/dynamic/143/590x/PUBG-886916.jpg" alt="pubg" onload="pubg()">
+            <a onclick="pubgInfo()">More Info:</a>
+            
+            <img src="http://cdn.akamai.steamstatic.com/steam/apps/359550/header.jpg?t=1519721936" alt="rs6" onload="rs6()">
+            <a onclick="rs6Info()">More Info:</a>
+            
+               
+        </div>
+        <div id="info"></div> 
+                
+        <?--INLINE: Alerts show then the imgs load
+            External Alert shows after each img loads
+        -->
+    </body>
+</html>

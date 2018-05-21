@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wksheet 10</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        var n = prompt("Enter 1 or -1");
+        parseInt("10")
+        var fruit = ["Banana", "Cereal", "Eggs", "Milk", "Potatoes"];
+        fruit.sort();
+        if(n == "-1")
+        {
+            fruit.reverse();
+        }
+        else if(n != "1")
+        {
+            document.getElementById("p").innerHTML = "INVALID INPUT";
+        }
+        if(n == "1" || n == "-1")
+        {
+            for (i = 0; i < fruit.length; i++) 
+            {
+                console.log(i);  
+                console.log(fruit[i]);
+                document.getElementById("p").innerHTML += fruit[i] + "<br/>";
+            }    
+        }
+        
+        function search()
+        {
+            
+            var found = false;
+            var x = document.getElementById("in").value;
+            var fst = x.charAt(0);
+            var f = fst.toUpperCase();
+            var res = x.slice(1, x.length);
+            var c = f + res;
+            console.log(c);
+            
+            for (i = 0; i < fruit.length; i++) 
+            {
+                if(fruit[i] == c)
+                {
+                    found = true;
+                    document.getElementById("d2").innerHTML = "Index of " + x + " is: " + i;        
+                }
+            }
+            if(found == false)
+            {
+                document.getElementById("d2").innerHTML = "Item not found";
+            }
+        }
+        function spl()
+        {
+            
+            var found = false;
+            var x = document.getElementById("in2").value;
+            var arr = x.split(",");
+            console.log(c);
+            splitAndReverseTxt(param1);
+            
+        }
+    </script>
+    Write down the element which you want to search for(the first letter should be upper case while the remaining letters should be in lower).
+    <input type="text" id="in" name="lastname"><br>
+    <input type="submit" onclick="search()" value="Submit">
+    <div id="d2">
+    
+    </div>
+    <br/>
+    Please enter a set of comma separated values<br/>
+    These values will then be split as single items in an array.
+    <input type="text" id="in2" name="lastname"><br>
+    <input type="submit" onclick="spl()" value="Submit">
+
+</body>
+</html>

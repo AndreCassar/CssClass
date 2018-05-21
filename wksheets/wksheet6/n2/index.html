@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function ld()
+        {
+            var number = prompt("Please enter your number");
+        console.log(number);
+        //document.getElementById("demo").innerHTML = 5 + 6;
+        document.getElementById("pars").innerHTML = parseInt(number);
+            document.getElementById("cei").innerHTML = Math.ceil(number);
+            document.getElementById("floo").innerHTML = Math.floor(number);
+            document.getElementById("rou").innerHTML = Math.round(number);
+
+        }
+    </script>
+</head>
+<body onload="ld()">
+    <table>
+      
+      <tr>
+        <th>Method</th>
+        <th>Result</th>
+      </tr>
+      <tr>
+        <td>ParseInt()</td>
+        <td id="pars"></td>
+        
+      </tr>
+      <tr>
+        <td>Ceil</td>
+        <td id="cei"></td>
+      </tr>
+      <tr>
+        <td>floor</td>
+        <td id="floo"></td>
+      </tr>
+      <tr>
+        <td>round</td>
+        <td id="rou"></td>
+      </tr>
+    </table>
+</body>
+</html>

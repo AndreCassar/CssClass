@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <script>
+            function sum() 
+            {
+                var sum = 0;
+                for (i = 1; i < 11; i++) 
+                {
+                    sum += i;
+                }
+                
+                alert("Sum of first 10 numbers is:"+ sum)
+            }
+            
+            function mult() 
+            {
+                var ans = 1;
+                for (i = 2; i < 11; i++) 
+                {
+                    ans = ans * i;
+                }
+                alert("Mult of first 10 numbers is:"+ ans)
+            }
+            function numType() 
+            {
+                alert("The type of 35.6 is " + typeof 35.6)
+            }
+            
+            function stringType() 
+            {
+                alert('The type of "35.6" is ' + typeof "dog")
+            }
+            function boolType() 
+            {
+                alert("The type of true is " + typeof true)
+            }
+        </script>
+    </head>
+    <body>
+    <button onclick="sum()">Sum of 1st 10 numbers</button>
+    <button onclick="mult()">Multiplication of 1st 10 numbers</button>
+    <button onclick="numType()">Type of 35.6 is</button>
+    <button onclick="stringType()">Type of "dog" is</button>
+    <button onclick="boolType()">Type of true is</button>
+    </body>
+</html>

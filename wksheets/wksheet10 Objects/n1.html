@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function getLength() 
+        {
+            function Car(make, model, year, colour, started) 
+            {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+                this.colour = colour;
+                this.started = false;
+                
+                this.start = function()
+                {
+                    if(this.started == false)
+                    {
+                        alert("Car on!");
+                        this.started = true;    
+                    }
+                    else
+                    {
+                        alert("Car is already on!"); 
+                    }
+                };
+                this.stop = function()
+                {
+                    if(this.started == false)
+                    {
+                        alert("You need to start the car first");    
+                    }
+                    else
+                    {
+                        alert("Car off!");
+                        this.started = false;
+                    }
+                    
+                };
+            }
+            var c = new Car('Fiat', 'Cinquecenete', 2017, 'White', false);
+            //alert(c.make);
+            document.getElementById("make").innerHTML += c.make;
+            document.getElementById("model").innerHTML += c.model;
+            document.getElementById("colour").innerHTML += c.colour;
+            document.getElementById("year").innerHTML += c.year;
+            Start = function () 
+            {
+                c.start();
+            };
+
+            Stop = function () {
+                c.stop();
+            };
+            //document.getElementById("l").innerHTML += data.length;    
+        }
+    </script>
+</head>
+
+<body onload="getLength()">
+    <p id="make">ID: </p>
+    <p id="model">Model: </p>
+    <p id="colour">Colour: </p>
+    <p id="year">Year: </p>
+    <button onclick="Start()">Start</button>
+    <button onclick="">Drive</button>
+    <button onclick="">Brake</button>
+    <button onclick="Stop()">Stop</button>
+</body>
+</html>

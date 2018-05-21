@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script>
+            var data = [];
+            data = ['Chasing Cars', 'Human', 'Mr. Brightside', 'Super Massive Black Hole', 'Twisted Transistor', 'Yellow', 'Seven Nation Army']
+            function getLength() 
+            {
+                document.getElementById("l").innerHTML += data.length;
+            }
+            
+            function getItem() 
+            {
+                document.getElementById("p").style.color = "black";
+                if(document.getElementById("0").checked == true)
+                {
+                    var x = document.getElementById("ind").value;
+                    console.log(data[x]) 
+                    if(data[x] == undefined)
+                    {
+                        document.getElementById("p").innerHTML = "The item is not found";   document.getElementById("p").style.color = "red"; 
+                    }
+                    else
+                    {
+                        document.getElementById("p").innerHTML = "Song: "+data[x];
+                    }    
+                }
+                else
+                {
+                    var x = document.getElementById("ind").value;
+                    x--;
+                    console.log(x)
+                    console.log(data[x]) 
+                    if(data[x] == undefined)
+                    {
+                        document.getElementById("p").innerHTML = "The item is not found";   document.getElementById("p").style.color = "red"; 
+                    }
+                    else{
+                    document.getElementById("p").innerHTML = "Song: "+data[x];
+
+                    }    
+                }
+                
+                
+                
+            }
+        </script>
+    </head>
+    <body onload="getLength()">
+        <h3>Working with Arrays</h3>
+        <p id="l">We are going to work with an array having a length of: </p>
+        Choose your preference of a array index<br/>
+        <input type="radio" id="0" name="start_ind" value="0" checked>Starting from 0<br>
+        <input type="radio" id="1" name="start_ind" value="1">Starting from 1<br>
+
+        Enter the item`s index to view value <input type="text" id="ind" name="LastName"
+        <br>
+        <input type="submit" value="Fetch" onclick="getItem()">
+
+        <p id="p"></p>
+    </body>
+</html>

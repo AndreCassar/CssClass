@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body
+        {
+           height: 180px;
+        }
+        
+    </style>
+    <script>
+        function toFahrenheit() 
+        {
+            var ans = document.getElementById("one").value;
+            ans = (ans * (9/5)) + 32;
+            document.getElementById("two").value = ans;
+        }
+        function toCelsius() 
+        {
+            var ans = document.getElementById("two").value;
+            ans = (5/9) * (ans-32);
+            document.getElementById("one").value = ans;
+        }
+        function convert()
+        {
+            var o = document.getElementById("one").value;
+            var two = document.getElementById("two").value;
+            if(o == "" && two == "")
+            {
+                alert("both are empty")
+            }
+            else if(o != "" && two != "")
+            {
+                alert("both are full")
+            }
+            else if(two == "")
+            {
+                toFahrenheit()
+            }
+            else
+            {
+                toCelsius()
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <h4>This is a Temperature Conversion page</h4>
+    Degrees: <input id="one" type="text" name="Degrees"><br>
+    <br/>
+    <br/>
+    Fahrenheit: <input id="two" type="text" name="Fahrenheit"><br>
+    <button onclick="convert()">Convert</button>    
+    
+    
+</body>
+</html>

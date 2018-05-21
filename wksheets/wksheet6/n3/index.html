@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        function getPos(str, s)
+        {
+
+            var pos = str.indexOf(s);
+
+            return pos;
+        }   
+        function find()
+        {
+            var str = document.getElementById("unravel").innerHTML;
+            var s = document.getElementById("ch").value;
+            var p = getPos(str, s);
+            alert(p)
+        }
+        
+        
+    </script>
+</head>
+<body onload="ld()">
+    <p id="unravel">Tell me, please tell me, what this plot is all about.. Exactly, who resides within me? 
+I'm broken, so broken - amidst this world. Yet you laugh, blind to everything.
+
+Being as broken as I am, I hold my breath, 
+And it can't be unraveled, it can no longer be unraveled.. Not even the truth. (Freeze) 
+Breakable; unbreakable - psychotic; unable to go insane 
+I'll find you, and..!
+
+In this shaken, twisted world, I gradually become transparent, unable to be seen. 
+Please don't bother looking for me; don't stare at me.. 
+I merely don't want to hurt you, inside a world, that came out of someone's imagination. 
+So please remember me; as vivid as I was.</p><br/>
+Enter character or string: <input id="ch" type="text"> <button onclick="find()">Find position</button>
+        
+    
+
+
+</body>
+
+</html>

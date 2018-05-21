@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div
+        {
+            width: 100%;
+            float: right;
+        }
+    </style>
+    <script>
+        function string1ToInt() 
+        {
+            var a = document.getElementById("string1").innerHTML;
+            console.log(parseInt(a))
+            document.getElementById("string1").innerHTML = parseInt(a);
+        }
+    </script>
+</head>
+<body>
+    String 1:
+    <div id="string1">
+        99 bottles of beer on the wall, 99 bottles of beer.    
+    </div>
+    <br/>
+    String 2:
+    <div id="string2">
+        There are many people who are taking the bottles off the wall.    
+    </div>
+    <br/>
+    String 3:
+    <div id="string3">
+        3.50 Eur is the price of each beer.    
+    </div>
+    <br/>
+    String 4:
+    <div id="string4">
+        There are 26 bottles left on the wall. These bottles are from 3 different types of brands.
+    </div>
+
+    <br/>
+    <button onclick="string1ToInt()">Parse String 1 to int</button>
+    <button>Parse String 2 to int</button>
+    <button>Parse String 3 to int</button>
+    <button>Parse String 3 to float</button>
+    <button>Parse String 4 to int</button>
+    
+    
+</body>
+</html>
+

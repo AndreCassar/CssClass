@@ -1,0 +1,15 @@
+table, th, td 
+{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+th
+{
+    background-color: aqua;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#final
+{
+    background-color: goldenrod;
+}

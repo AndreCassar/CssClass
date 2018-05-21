@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body
+        {
+            width: 50%;
+        }
+        p
+        {
+            
+            width: 50%;
+
+        }
+        
+        button
+        {
+
+            
+        }
+    </style>
+    <script>
+        var num1 = prompt("Enter Num 1");
+        var num2 = prompt("Enter Num 2");
+        
+        function add() 
+        {
+            var sum = parseInt(num1) + parseInt(num2);
+            document.getElementById("a").innerHTML = "Addition: "+ sum;
+            
+        }
+        function sub() 
+        {
+            var ans = parseInt(num1) - parseInt(num2);
+            document.getElementById("s").innerHTML = "Subtraction: "+ ans;
+            
+        }
+        function mult() 
+        {
+            var ans = parseInt(num1) * parseInt(num2);
+            document.getElementById("m").innerHTML = ans;
+        }
+        
+        function div() 
+        {
+            var ans = parseInt(num1) / parseInt(num2);
+            document.getElementById("d").innerHTML = ans;
+        }
+        function pow() 
+        {
+            var ans = Math.pow(parseInt(num1),parseInt(num2));
+            document.getElementById("p").innerHTML = ans;
+        }
+        
+        function mod() 
+        {
+            var ans = parseInt(num1) % parseInt(num2);
+            document.getElementById("p").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h2>Working with numbers</h2>
+
+    
+    <p id="a">Addition:</p>
+    <button onclick="add()">Calculate</button>
+    
+    <p id="s">Subtraction:</p>
+    <button onclick="sub()">Calculate</button>
+    
+    <p id="m">Multiplication:</p>
+    <button onclick="mult()">Calculate</button>
+    
+    <p id="d">Division:</p>
+    <button onclick="div()">Calculate</button>
+    
+    <p id="p">Power:</p>
+    <button onclick="pow()">Calculate</button>
+    
+    <p id="m">Modulus:</p>
+    <button onclick="mod()">Calculate</button>
+    
+    <p id="ar">Area:</p>
+    <button>Calculate</button>
+    
+    <p>Square Perimeter:</p>
+    <button>Calculate</button>
+</body>
+</html>

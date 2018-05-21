@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var clicks = 0;
+        function change(divObj)
+        {
+            if(divObj.style.background == "red")
+            {
+                divObj.style.background="blue";    
+            }
+            else
+            {
+                divObj.style.background="red";
+            }    
+        }
+        function hide()
+        {
+            if(document.getElementById("list").style.display == "none")
+            {
+                document.getElementById("list").style.display = "";
+                document.getElementById("b").innerHTML = "Hide";
+                clicks++;
+                document.getElementById("c").innerHTML = "Clicks: "+clicks;
+                
+            }
+            else
+            {
+                document.getElementById("list").style.display = "none";
+                document.getElementById("b").innerHTML = "Show";
+                clicks++;
+                document.getElementById("c").innerHTML = "Clicks: "+clicks;
+            }
+        }
+    </script>
+
+</head>
+    <div id="one" onclick="change(this)">Click to change me!</div>
+    <div id="two" onclick="change(this)">Click to change me!</div>
+    
+    <ul id="list">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+      <li>Five</li>
+      <li>Six</li>
+    </ul> 
+    <button id="b" onclick="hide()">Hide!</button>
+    <div id="c">Clicks: 0</div>
+</html>
